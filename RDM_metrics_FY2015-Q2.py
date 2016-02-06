@@ -281,9 +281,9 @@ basepath = ''
 #basepath = '/Users/rjaffe/Documents/RDM/RDM_Metrics/MetricsData/'
 # Use this basepath when working in iPython notebook on Rick's virtual box BCE instance
 # basepath = '/home/oski/Desktop/Shared/sf_VBox-BCE_sf_Documents/'
+filename = sys.argv[1]
 # Replace sys.argv[1] with 'RDMConsulting_Ricks_view_FY2015-Q2_2016-02-06T12-50-39.csv'
 # when running Python 2 or 3 in pyCharm
-filename = sys.argv[1]
 #filename = 'RDMConsulting_Ricks_view_FY2015-Q2_2016-02-06T12-50-39.csv'
 path = basepath + filename
 # print(path)  # Check location of file
