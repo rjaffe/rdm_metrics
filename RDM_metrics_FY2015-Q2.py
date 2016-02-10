@@ -28,6 +28,7 @@ with open(filename) as csvfile:
         except:
             # if there is no 'to', assume startdate == enddate
             (startdate, enddate) = (row[1], row[1])
+        # Create positional elements [8] startdate and [9] enddate
         row.extend([startdate, enddate])
 
         # Referrals in, Referrals out, Clean Department, Organizational partner and Patron status "columns":
@@ -37,7 +38,8 @@ with open(filename) as csvfile:
                 row[n] = label
             # make every cell into a list (some cells have comma separated values)
             row[n] = row[n].split(', ')
-        # Replace individual names with the corresponding org name in Referral In and Referral Out fields (positional elements [3] and [4]),
+        # Replace individual names with the corresponding org name in Referral In and Referral Out fields
+        # (positional elements [3] and [4])
         for n in [3, 4]:
             ref_x = row[n]
             row[n] = []  # Empty cell to ready it for being re-filled
@@ -53,8 +55,8 @@ with open(filename) as csvfile:
 print('\nIn FY2015-Q2, RDM Consulting provided %d consultations.' % (len(myrows) - 1))
 
 # Count how many engagements are resolved successfully
-myrows = [r for r in myrows if r[2] == 'Yes, we have an answer!']
-print('We reached a successful resolution in %d of those engagements.' % len(myrows))
+yesrows = [r for r in myrows if r[2] == 'Yes, we have an answer!']
+print('We reached a successful resolution in %d of those engagements.' % len(yesrows))
 
 # Gather and count (subtotal) the values for referrals in, referrals out, departments,
 # organizational partners and patron status (only those five "columns" for now).
