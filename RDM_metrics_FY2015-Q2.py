@@ -49,6 +49,8 @@ with open(filename) as csvfile:
                         term = refs[key][0]
                         row[n].append(term)
         myrows.append(row)
+    # Remove header row -- it throws off counts.
+    myrows = myrows[1:]
 
 # ***** COUNT THE DATA *****
 # Each row (list) except first (header) row represents a consulting engagement
