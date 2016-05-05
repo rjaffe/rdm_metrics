@@ -9,15 +9,17 @@ import config_v2
 #    [1] Date/Time (Start)
 #    [2] Date/Time (End)
 #    [3] Is this question answered?
-#    [4] Referral In
-#    [5] Referral Out
+#    [4] Referral in
+#    [5] Referral out
 #    [6] Department
 #    [7] Organizational partners
 #    [8] Patron status
+#    [9] Consultation complexity
 
 
 filename = sys.argv[1]
-report_period = sys.argv[2]
+report_period_descriptor = sys.argv[2]
+#TO-DO: Add code to accept report_period_date_filter arguments
 myrows = []
 
 # Read data into a list of lists, clean as required
@@ -35,7 +37,7 @@ with open(filename) as csvfile:
             # make every cell into a list (some cells have comma separated values)
             row[n] = row[n].split(', ')
         # Replace individual names with the corresponding org name in Referral In and Referral Out fields
-        # (positional elements [3] and [4])
+        # (positional elements [4] and [5])
         for n in [4, 5]:
             ref_x = row[n]
             row[n] = []  # Empty cell to ready it for being re-filled
@@ -50,14 +52,14 @@ with open(filename) as csvfile:
 
 # ***** COUNT THE DATA *****
 # Each row (list) except first (header) row represents a consulting engagement
-print('\nIn %s, RDM Consulting provided %d consultations.' % (report_period, (len(myrows) - 1)))
+print('\nIn %s, RDM Consulting provided %d consultations.' % (report_period_descriptor, (len(myrows))))
 
 # Count how many engagements are resolved successfully
 yesrows = [r for r in myrows if r[3] == 'Yes, we have an answer!']
 print('We reached a successful resolution in %d of those engagements.' % len(yesrows))
 
 # Gather and count (subtotal) the values for referrals in, referrals out, departments,
-# organizational partners and patron status (only those five "columns" for now).
+# organizational partners, patron status, and consultation complexity (only those six "columns" for now).
 for i, n in enumerate(config_v2.dictable_cols):
     counter = Counter()
     for row in myrows:
