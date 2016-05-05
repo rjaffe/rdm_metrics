@@ -13,6 +13,7 @@ To run, download or clone the script and the configuration file to the same fold
      python RDM_metrics_genericized.py {csv filepath and name} {report period descriptor}
 
 For example:
+
      python RDM_metrics_genericized.py /path/to/file/RDMConsulting_Ricks_view_FY2015-16_Q3_2016-05-04T17-15-48.csv FY2015-16_Q3
 
 (no line break)
