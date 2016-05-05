@@ -16,8 +16,6 @@ For example:
 
      python RDM_metrics_genericized.py /path/to/file/RDMConsulting_Ricks_view_FY2015-16_Q3_2016-05-04T17-15-48.csv FY2015-16_Q3
 
-(no line break)
-
 This will run the script on the file RDMConsulting_Ricks_view_FY2015-16_Q3_2016-05-04T17-15-48.csv. The ouptut will include a line that reads:
 
      In FY2015-16_Q3, RDM Consulting provided {x} consultations.
