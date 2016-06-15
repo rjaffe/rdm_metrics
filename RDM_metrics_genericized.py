@@ -16,7 +16,6 @@ import config_v2
 #    [8] Patron status
 #    [9] Consultation complexity
 
-
 filename = sys.argv[1]
 report_period_descriptor = sys.argv[2]
 #TO-DO: Add code to accept report_period_date_filter arguments
