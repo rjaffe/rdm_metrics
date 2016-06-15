@@ -50,6 +50,7 @@ with open(filename) as csvfile:
     # Remove header row -- it throws off counts.
     myrows = myrows[1:]
 
+
 # ***** COUNT THE DATA *****
 # Each row (list) except first (header) row represents a consulting engagement
 print('\nIn %s, RDM Consulting provided %d consultations.' % (report_period_descriptor, (len(myrows))))
@@ -67,4 +68,4 @@ for i, n in enumerate(config_v2.dictable_cols):
             counter[z] += 1
     print('\n' + config_v2.headings[i] + ':')
     for (k, v) in counter.most_common():
-        print(k + ' (' + str(v) + ')')
+        print(k + ' ,' + str(v))
