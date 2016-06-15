@@ -21,5 +21,6 @@ refs = {
 
 labels = ['', 'None', 'Unknown department', 'Consultation(s) without a partner', 'Unknown', '']
 
-headings = ['Referrals In', 'Referrals Out', 'Departments served (number of engagements)',
-            'Organizational partners (number of shared engagements)', 'Patron status (number of patrons)', 'Consultation complexity']
+headings = ['Referrals In', 'Referrals Out', 'Departments served, number of engagements',
+            'Organizational partners, number of shared engagements', 'Patron status, number of patrons', 'Consultation complexity']
+   
