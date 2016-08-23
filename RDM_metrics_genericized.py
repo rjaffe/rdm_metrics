@@ -16,7 +16,6 @@ import config_v2
 #    [8] Patron status
 #    [9] Consultation complexity
 
-
 filename = sys.argv[1]
 report_period_descriptor = sys.argv[2]
 #TO-DO: Add code to accept report_period_date_filter arguments
@@ -50,6 +49,7 @@ with open(filename) as csvfile:
     # Remove header row -- it throws off counts.
     myrows = myrows[1:]
 
+
 # ***** COUNT THE DATA *****
 # Each row (list) except first (header) row represents a consulting engagement
 print('\nIn %s, RDM Consulting provided %d consultations.' % (report_period_descriptor, (len(myrows))))
@@ -67,4 +67,4 @@ for i, n in enumerate(config_v2.dictable_cols):
             counter[z] += 1
     print('\n' + config_v2.headings[i] + ':')
     for (k, v) in counter.most_common():
-        print(k + ' (' + str(v) + ')')
+        print(k + ' ,' + str(v))
