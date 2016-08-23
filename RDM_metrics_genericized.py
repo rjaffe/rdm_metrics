@@ -67,4 +67,4 @@ for i, n in enumerate(config_v2.dictable_cols):
             counter[z] += 1
     print('\n' + config_v2.headings[i] + ':')
     for (k, v) in counter.most_common():
-        print(k + ' ,' + str(v))
+        print(k + ', ' + str(v))
