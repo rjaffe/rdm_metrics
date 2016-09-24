@@ -2,7 +2,7 @@ import csv, sys
 from collections import Counter
 import config_v2
 
-# View now produces Date/Time End column, so the row no.'s have shifted
+# View now produces Date/Time End and Library Division columns so the row no.'s have shifted
 
 # Column headers (row to be removed):
 #    [0] Title ("Question asked")
