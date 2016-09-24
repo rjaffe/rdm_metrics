@@ -1,6 +1,6 @@
 # Positional elements (columns) with the following indices -- and only those elements, at present --
 # will be gathered and counted using a dictionary
-dictable_cols = [4, 5, 6, 7, 8, 9]
+dictable_cols = [4, 5, 6, 7, 8, 9, 10]
 
 # let the data do the heavy lifting...everything is in this dict!
 refs = {
@@ -22,7 +22,7 @@ refs = {
     'ssw': ['School of Social Welfare', ['David Fullmer']]
 }
 
-labels = ['', 'None', 'Unknown department', 'Consultation(s) without a partner', 'Unknown', '']
+labels = ['', 'None', 'Unknown department', 'Unknown division', 'Consultation(s) without a partner', 'Unknown', '']
 
-headings = ['Referrals In', 'Referrals Out', 'Departments served, number of engagements',
-            'Organizational partners, number of shared engagements', 'Patron status, number of patrons', 'Consultation complexity']
+headings = ['Referrals In', 'Referrals Out', 'Departments Served, number of engagements', 'Library Division, number of engagements',
+            'Organizational Partners, number of shared engagements', 'Patron Status, number of patrons', 'Consultation Complexity']

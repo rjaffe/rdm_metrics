@@ -12,9 +12,10 @@ import config_v2
 #    [4] Referral in
 #    [5] Referral out
 #    [6] Department
-#    [7] Organizational partners
-#    [8] Patron status
-#    [9] Consultation complexity
+#    [7] Library division
+#    [8] Organizational partners
+#    [9] Patron status
+#    [10] Consultation complexity
 
 filename = sys.argv[1]
 report_period_descriptor = sys.argv[2]
@@ -28,7 +29,7 @@ with open(filename) as csvfile:
         if not row[3]: continue
 
         # Referrals in, Referrals out, plus controlled-vocabulary \
-        # Department, Organizational partner and Patron status "columns":
+        # Department, Library division, Organizational partner and Patron status "columns":
         # replace empty values with appropriate label
         for n, label in zip(config_v2.dictable_cols, config_v2.labels):
             if row[n] == '':
