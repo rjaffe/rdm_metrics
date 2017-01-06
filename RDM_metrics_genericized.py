@@ -28,8 +28,8 @@ with open(filename) as csvfile:
         # Remove rows in which "Is this question answered?" is blank -- i.e., 'FYI only' engagements
         if not row[3]: continue
 
-        # Referrals in, Referrals out, plus controlled-vocabulary \
-        # Department, Library division, Organizational partner and Patron status "columns":
+        # Referrals in, Referrals out, plus controlled-vocabularies "columns"
+        # Department, Library division, Organizational partner, Patron status and Consultation complexity:
         # replace empty values with appropriate label
         for n, label in zip(config_v2.dictable_cols, config_v2.labels):
             if row[n] == '':
