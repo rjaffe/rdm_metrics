@@ -18,6 +18,15 @@ from datetime import datetime
 #    [9] Patron status
 #    [10] Consultation complexity
 
+if len(sys.argv) < 5:
+    err_msg = "This script takes four arguments: \n \
+    the filename of a csv file (include the path to the file if not in same directory as script), \n \
+    a text description of the report period (use double-quotes around phrases with spaces, apostrophes, etc.), \n \
+    a report period begin-date (in YYYY-MM-DD format) and \n \
+    a report period end-date (also in YYYY-MM-DD format)"
+    print(err_msg)
+    sys.exit("Error: Not enough arguments provided")
+
 filename = sys.argv[1]
 report_period_descriptor = sys.argv[2]
 # IMPORTANT - report_period_begin and report_period_end must be provided and must be in YYYY-MM-DD format
@@ -38,9 +47,11 @@ with open(filename) as csvfile:
         # Convert consulting engagement start date from string to date, compare to report begin and end dates
         if row[1] != 'Date/Time':   # Skip header row
             startdate = datetime.strptime(row[1], "%A, %B %d, %Y")
-            if not rbeg <= startdate <= rend: continue
+            if not rbeg <= startdate <= rend:
+                continue
         # Remove rows in which "Is this question answered?" is blank -- i.e., 'FYI only' engagements
-        if not row[3]: continue
+        if not row[3]:
+            continue
 
         # Referrals in, Referrals out, plus controlled-vocabulary \
         # Department, Library division, Organizational partner and Patron status "columns":
