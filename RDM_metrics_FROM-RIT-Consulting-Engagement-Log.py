@@ -16,7 +16,8 @@ import config_v3  # Configuration of the dictionaries. File location relative to
 # 4 & 5. Report_start and report_end are the beginning and end dates (inclusive) \
 #        of the period covered by the report.
 
-# TEST THIS IN PYCHARM!!
+# Uncomment these if you want to provide arguments at the command line.
+# TODO: Add way to import these from a metrics_args... file.
 filepath =  sys.argv[1] # Path to csv file
 filename =  sys.argv[2] # csv file name
 report_period_descriptor = sys.argv[3]
