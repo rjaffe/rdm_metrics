@@ -11,9 +11,13 @@ NOTE that the two versions are not always in sync...most development gets done i
 The Python script takes five arguments: 
 
 • The first argument provides the path to the .csv file, stored locally on your computer.
+
 • The second provides the filename itself. 
+
 • The third provides the text that describes the period that the report covers.
+
 • The fourth provides the earliest consultation start date that the script will include.
+
 • The fifth provides the latest consultation state date that the script will include.
 
 In the Jupyter Notebook, these can be entered manually or read from a file using the %load cell magic. Loading from a file allows you to save the parameters for later review and reuse. We've stored our files in a folder called Metrics_args.
