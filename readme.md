@@ -58,5 +58,6 @@ All changes should be submitted as pull-requests to that repository.
 PLEASE pay attention to syntax - quotes, commas, and especially trailing commas! - when updating the configuration.
 
 Note that the configuration cell/file also includes display text for empty values in a number of fields and headings for the various categories in the output report. These shouldn't change very often.
+
 ===
 
