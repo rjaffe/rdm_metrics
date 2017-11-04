@@ -2,7 +2,7 @@ import csv, sys
 import re
 from collections import Counter
 from datetime import date, datetime
-import config_v3  # Configuration of the dictionaries. File location relative to this script
+import config_20171104  # Configuration of the dictionaries. File location relative to this script
 
 # CSV now generated from Google sheet ("Research IT Consulting Engagement Log"), 
 # then filtered for date, RIT Service (= 'RDM') and Category 
