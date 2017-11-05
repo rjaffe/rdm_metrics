@@ -4,7 +4,7 @@ Scripts for cleaning, counting, displaying, etc. Research Data Management progra
 
 RUNNING THE SCRIPT
 
-After October 2017, please use the Jupyter Notebook RDM_metrics_FROM-RIT-Consulting-Engagement-Log.ipynb or the Python script RDM_metrics_FROM-RIT-Consulting-Engagement-Log.py. The Jupyter Notebook has a cell that contains the required five arguments and another that holds the dictionary configuration. The Python script takes five arguments on the command line and gets its dictionary configuration from the file config_v3.py. Both versions operate on a .csv file exported from the Google Sheet "Research IT Consulting Engagements Log." Contact Rick or Amy for information on how to download the CSV file.
+After October 2017, please use the Jupyter Notebook RDM_metrics_FROM-RIT-Consulting-Engagement-Log.ipynb or the Python script RDM_metrics_FROM-RIT-Consulting-Engagement-Log.py. The Jupyter Notebook has a cell that contains the required five arguments and another that holds the dictionary configuration. The Python script takes five arguments on the command line and gets its dictionary configuration from the file config_{datestamp}.py. Both versions operate on a .csv file exported from the Google Sheet "Research IT Consulting Engagements Log." Contact Rick or Amy for information on how to download the CSV file.
 
 NOTE that the two versions are not always in sync...most development gets done in one version (these days, typically, the Jupyter Notebook) and ported to the other.
 
@@ -47,9 +47,9 @@ Values for Referrals In and Referrals Out group a number of individuals into cat
 
 The lefthand-most value (e.g., 'css') is the key for that dictionary entry. The value for each key is a nested list. The first item in the list (e.g., 'Campus Shared Services - IT') is the text that displays in the output; the second item is a list containing names associated with each organization. These could be individuals or terms used during data entry to refer to the unit (e.g., 'Brett Larsen', 'Daniel Bass', 'Johnathon Kogelman', 'CSS-IT').
 
-The script imports this dictionary from a file named config_v3.py.
+The script imports this dictionary from a file named config_{datestamp}.py.
  
-We need to update the lists that comprise the dictionary as new people refer cases to us or we refer cases to people for the first time. The file config_v3.py is version-controlled in GitHub at:
+We need to update the lists that comprise the dictionary as new people refer cases to us or we refer cases to people for the first time. The file config_{datestamp}.py is version-controlled in GitHub at:
 
     https://github.com/rjaffe/rdm_metrics.
 
