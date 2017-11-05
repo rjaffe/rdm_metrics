@@ -4,7 +4,7 @@ Scripts for cleaning, counting, displaying, etc. Research Data Management progra
 
 RUNNING THE SCRIPT
 
-After October 2017, please use the Jupyter Notebook RDM_metrics_FROM-RIT-Consulting-Engagement-Log.ipynb or the Python script RDM_metrics_FROM-RIT-Consulting-Engagement-Log.py. The Jupyter Notebook has a cell that contains the required five arguments and another that holds the dictionary configuration. The Python script takes five arguments on the command line and gets its dictionary configuration from the file config_v3.py. Both versions operate on a .csv file exported from the Google Sheet "Research IT Consulting Engagements Log." Contact Rick or Amy for information on how to download the CSV file.
+After October 2017, please use the Jupyter Notebook RDM_metrics_FROM-RIT-Consulting-Engagement-Log.ipynb or the Python script RDM_metrics_FROM-RIT-Consulting-Engagement-Log.py. The Jupyter Notebook has a cell that contains the required five arguments and another that holds the dictionary configuration. The Python script takes five arguments on the command line and gets its dictionary configuration from the file config_{datestamp}.py. Both versions operate on a .csv file exported from the Google Sheet "Research IT Consulting Engagements Log." Contact Rick or Amy for information on how to download the CSV file.
 
 NOTE that the two versions are not always in sync...most development gets done in one version (these days, typically, the Jupyter Notebook) and ported to the other.
 
