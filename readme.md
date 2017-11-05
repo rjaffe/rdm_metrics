@@ -47,9 +47,9 @@ Values for Referrals In and Referrals Out group a number of individuals into cat
 
 The lefthand-most value (e.g., 'css') is the key for that dictionary entry. The value for each key is a nested list. The first item in the list (e.g., 'Campus Shared Services - IT') is the text that displays in the output; the second item is a list containing names associated with each organization. These could be individuals or terms used during data entry to refer to the unit (e.g., 'Brett Larsen', 'Daniel Bass', 'Johnathon Kogelman', 'CSS-IT').
 
-The script imports this dictionary from a file named config_v3.py.
+The script imports this dictionary from a file named config_{datestamp}.py.
  
-We need to update the lists that comprise the dictionary as new people refer cases to us or we refer cases to people for the first time. The file config_v3.py is version-controlled in GitHub at:
+We need to update the lists that comprise the dictionary as new people refer cases to us or we refer cases to people for the first time. The file config_{datestamp}.py is version-controlled in GitHub at:
 
     https://github.com/rjaffe/rdm_metrics.
 
