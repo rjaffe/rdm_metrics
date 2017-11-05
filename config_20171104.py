@@ -18,10 +18,10 @@ dictable_cols = [1, 4, 6, 11, 12, 13, 14]
 
 #Initialize dictionaries that we'll use later
 ccounter, dcounter, pcounter, cacounter, scounter, rcounter, cocounter, \
-pagcounter, lscounter = {},{},{},{},{},{},{},{},{}
+pacounter, lscounter = {},{},{},{},{},{},{},{},{}
 
 # let the data do the heavy lifting...everything is in this dict!
-refs = {
+ref_rollups = {
     'lib': ['The Library', ['Harrison Dekker', 'Jamie Wittenberg', 'Susan Edwards', 'Steve Mendoza', 'Steven Mendoza',
                             'Margaret Phillips', 'data-consult list (Library)', 'Brian Quigley', 'Library',
                             'Data Storage/Sharing and the Social Sciences Working Group', 'Erik Mitchell',
@@ -75,24 +75,29 @@ refs = {
 }
 
 org_rollups = {
+    'cchem': ['College of Chemistry', ['Department of Chemistry']],
     'ced': ['College of Environmental Design', ['Department of City & Regional Planning']],
     'cnr': ['College of Natural Resources', ['Department of Agricultural & Resource Economics (ARE)',
                                              'Department of Plant and Microbial Biology']],
-    'coe': ['College of Engineering', ['Department of Civil and Environmental Engineering',
+    'coe': ['College of Engineering', ['Department of Bioengineering',
+                                       'Department of Civil and Environmental Engineering',
                                        'Department of Mechanical Engineering (ME)',
                                        'Division of Electrical Engineering/EECS']],
+    'dh':  ['Digital Humanities at Berkeley', ['Digital Humanities at Berkeley']],
     'gse': ['Graduate School of Education', ['Graduate School of Education (GSE)']],
     'gsj': ['Graduate School of Journalism', ['School of Journalism']],
     'haas':['Haas School of Business', ['Haas School of Business']],
     'law': ['Berkeley Law', ['School of Law']],
     'ls':  ['College of Letters & Science - College-wide', ['College of Letters and Science (L&S)']],
-    'lsa': ['College of Letters & Science - Arts & Humanities', []],
+    'lsa': ['College of Letters & Science - Arts & Humanities', ['Department of Music']],
     'lsb': ['College of Letters & Science - Biological Sciences', 
-                                            ['Department of Integrative Biology']],
+                                            ['Department of Integrative Biology', 
+                                             'Department of Molecular & Cell Biology (MCB)']],
     'lsm': ['College of Letters & Science - Math & Physical Sciences', 
                                             ['Department of Statistics']],
     'lss': ['College of Letters & Science - Social Sciences', 
-                                            ['Department of Economics','Department of History', 
+                                            ['Department of Anthropology',
+                                             'Department of Economics','Department of History', 
                                              'Department of Political Science','Department of Psychology',
                                              'Department of Sociology']],
     'nat': ['National Programs', ['Robert Wood Johnson Berkeley (Scholars in Health Policy Research Program)', ]],
@@ -104,11 +109,14 @@ org_rollups = {
     'vcr': ['Vice Chancellor for Research Office', ['Berkeley Institute for Data Science (BIDS)', 
                                                     'Berkeley Seismological Lab',
                                                     'Center for Studies in Higher Education',
+                                                    'Haas Institute for a Fair & Inclusive Society',
+                                                    'Industry Alliances Office (Vice Chancellor for Research)',
+                                                    'Institute of European Studies',
                                                     'Institute of Human Development', 
                                                     'Institute for Research on Labor and Employment (IRLE)', 
                                                     'Phoebe A. Hearst Museum of Anthropology', 
                                                     'UC Botanical Garden']],
-    'vcue':['Vice Chancellor for Undergraduate Education', ['Berkeley Resource Center for Online Education (BRCOE)']],
+    'vcue':['Vice Chancellor for Undergraduate Education', ['Berkeley Resource Center for Online Education (BRCOE)', 'Research IT']],
 }
 
 ls_rollup = {
