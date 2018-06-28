@@ -1,3 +1,14 @@
+# UPDATE: June 2018
+RDM tasks are now being tracked in Asana, so we have added a Jupyter notebook that runs the metrics script on a .csv file exported from that service. We have refactored the code to adapt to the changed process, and created a set of folders to store: 
+
+• Arguments passed to the metrics script ("Metrics_args_from_Asana")
+
+• Configuration of the dictionaries ("Metrics_config_files), and
+
+• Output files written by the script ("Metrics_output").
+
+Be sure to install these folders in your directory tree. Note that the configuration files and output data are not to be shared broadly, so these files will be ignored by Git. 
+
 # rdm_metrics
 Scripts for cleaning, counting, displaying, etc. Research Data Management program metrics based on data compiled in the Google Sheet "Research IT Consulting Engagement Log."
 
