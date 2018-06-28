@@ -1,7 +1,7 @@
 # UPDATE: June 2018
 RDM tasks are now being tracked in Asana, so we have added a Jupyter notebook that runs the metrics script on a .csv file exported from that service. We have refactored the code to adapt to the changed process, and created a set of folders to store: 
 
-• Arguments passed to the metrics script ("Metrics_args_from_Asana")
+• Arguments passed to the metrics script ("Metrics_args_Asana")
 
 • Configuration of the dictionaries ("Metrics_config_files), and
 
